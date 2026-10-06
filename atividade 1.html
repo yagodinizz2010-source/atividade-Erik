@@ -1,0 +1,26 @@
+*<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo jQuery</title>
+</head>
+<body>
+
+    <!-- Elementos HTML -->
+    <h1 id="titulo">Texto Antigo</h1>
+    <button id="btn-mudar">Mudar Texto</button>
+
+    <!-- 1. Importação da biblioteca jQuery (Obrigatório) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- 2. Seu código jQuery (sempre abaixo da CDN do jQuery) -->
+    <script>
+        $(document).ready(function() {
+            $('#btn-mudar').click(function() {
+                $('#titulo').text('Texto alterado com jQuery com sucesso!');
+            });
+        });
+    </script>
+
+</body>
+</html>*
