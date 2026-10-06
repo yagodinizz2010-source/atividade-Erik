@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo jQuery Toggle</title>
+</head>
+<body>
+
+    <!-- Elementos HTML -->
+    <p id="caixa">Esta caixa vai sumir e aparecer novamente com animação.</p>
+    <button id="btn-toggle">Alternar Visibilidade</button>
+
+    <!-- CDN do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Código jQuery de Animação -->
+    <script>
+        $(document).ready(function() {
+            $('#btn-toggle').click(function() {
+                $('#caixa').toggle(500); // Transição em 500 milissegundos
+            });
+        });
+    </script>
+
+</body>
+</html>

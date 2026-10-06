@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Validação de Formulário</title>
+</head>
+<body>
+
+    <!-- Formulário e Mensagem -->
+    <form id="meu-form">
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="mensagem"></p>
+
+    <!-- CDN do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Código jQuery -->
+    <script>
+        $(document).ready(function() {
+            $('#meu-form').submit(function(event) {
+                event.preventDefault();
+                const valor = $('#nome').val();
+                if (valor === '') {
+                    $('#mensagem').text('Por favor, preencha seu nome!').css('color', 'red');
+                } else {
+                    $('#mensagem').text(`Bem-vindo, ${valor}!`).css('color', 'green');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

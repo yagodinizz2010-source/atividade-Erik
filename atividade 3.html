@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo jQuery ToggleClass</title>
+    
+    <!-- O CSS fica no HEAD -->
+    <style>
+        .card { padding: 10px; border: 1px solid #ccc; background: #f9f9f9; }
+        .ativo { background: #d1fae5; border-color: #10b981; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <!-- Elementos HTML -->
+    <div id="card" class="card">Cartão de Exemplo</div>
+    <button id="btn-estilo">Ativar / Desativar</button>
+
+    <!-- CDN do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Código jQuery -->
+    <script>
+        $(document).ready(function() {
+            $('#btn-estilo').click(function() {
+                $('#card').toggleClass('ativo');
+            });
+        });
+    </script>
+
+</body>
+</html>
